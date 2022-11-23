@@ -25,6 +25,7 @@ function Header({ }: Props) {
                 <SocialIcon fgColor="gray" bgColor="transparent" url="https://www.linkedin.com/in/yusuf-zaki-samson/" />
                 <SocialIcon fgColor="gray" bgColor="transparent" url="https://github.com/zakisamson" />
                 <SocialIcon fgColor="gray" bgColor="transparent" url="https://gitlab.com/zakisamson" />
+                <SocialIcon fgColor="gray" bgColor="transparent" url="https://www.instagram.com/zakisamson/" />
             </motion.div>
             <motion.div 
             initial={{

@@ -17,7 +17,10 @@ function Hero({ }: Props) {
     return (
         <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
             <BackgroundCircle />
-            <img className='relative rounded-full mx-auto h-32 2-32 object-cover' src="https://media-exp1.licdn.com/dms/image/C4D03AQFRVdDrTDV7Tg/profile-displayphoto-shrink_100_100/0/1654474669288?e=1674691200&v=beta&t=N8YPSVPRSAeLSJTBnRcvclaZMuDqTQOLTAtW-aKS5tg" alt="Zaki's profile picture" />
+            <div className='relative md:mb-0 flex-shrink-0 w-32 h-32'>
+                <Image src={profilePic} className=' rounded-full' objectFit='cover' alt="Zaki's profile picture"/>
+            </div>
+            {/* <img className='relative rounded-full mx-auto h-32 2-32 object-cover' src="https://media-exp1.licdn.com/dms/image/C4D03AQFRVdDrTDV7Tg/profile-displayphoto-shrink_100_100/0/1654474669288?e=1674691200&v=beta&t=N8YPSVPRSAeLSJTBnRcvclaZMuDqTQOLTAtW-aKS5tg" alt="Zaki's profile picture" /> */}
             <div className='z-20'>
                 <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>Web Developer</h2>
                 <h1 className='text-5xl lg:text-6xl font-semibold px-10'>
