@@ -1,23 +1,35 @@
 import Image from 'next/image'
 import React from 'react'
+import { motion } from "framer-motion"
+import { Experiences } from '../model/experience'
 
-type Props = {}
+type Props = Experiences
 
-function ExperienceCard({ }: Props) {
+function ExperienceCard({ jobTitle, companyName, techUsed, dateStarted, dateEnded, points }: Props) {
     return (
-        <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200'>
+        <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[400px] md:w-[600px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200'>
             <div className='px-0 md:px-10'>
-                <h4 className='text-4xl font-light'>Front-End Developer</h4>
-                <p className='font-bold text-2xl mt-1'>PT.Inovasi Realita Nusantara</p>
+                <h4 className='text-4xl font-light'>{jobTitle}</h4>
+                <p className='font-bold text-2xl mt-1'>{companyName}</p>
                 <div className='flex space-x-2 my-2'>
-                    {/* tech used */}
+                    {techUsed && techUsed.map(({ id, url }) => {
+                        return (
+                            <motion.img
+                                src={url}
+                                key={id}
+                                initial={{ opacity: 1 }}
+                                transition={{ opacity: 1 }}
+                                className='rounded-full border border-gray-500 object-cover w-10 h-10 md:h-12 md:w-12 xl:w-14 xl:h-14 filter group-hover:grayscale transition duration-300 ease-in-out' />
+                        )
+                    })}
                 </div>
-                <p className='uppercase py-5 text-gray-300'>Jun 2021 - Jun 2022</p>
+                <p className='uppercase py-5 text-gray-300'>{dateStarted} - {dateEnded}</p>
                 <ul className='list-disc space-y-4 ml-5 text-lg'>
-                    <li>Point</li>
-                    <li>Point</li>
-                    <li>Point</li>
-                    <li>Point</li>
+                    {points && points.map(({ id, point }) => {
+                        return (
+                            <li key={id}>{point}</li>
+                        )
+                    })}
                 </ul>
             </div>
         </article>
