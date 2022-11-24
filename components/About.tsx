@@ -25,7 +25,7 @@ function About({ }: Props) {
                 className="-mb-20 md:mb-0 flex-shrink-0 w-60 h-60 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
             />
             <div className="space-y-10 px-0 md:px-10">
-                <h4 className='text-4xl font-semibold'>Here's a <span className='underline decoration-[#e28743]'>little</span> summary about me</h4>
+                <h4 className='text-4xl font-semibold'>{`Here's`} a <span className='underline decoration-[#e28743]'>little</span> summary about me</h4>
                 <p className='text-base'>Experienced Front End Developer with quite a history of working in the Information and Technology industry. Possess adept skills in HTML, CSS, Javascript, broad knowledge in React, Laravel, Codeigniter, and fluency in English. Strongly supported by an educational background in Politeknik Elektronika Negeri Surabaya majoring in Computer Engineering (Bachelor of Applied Science)</p>
             </div>
         </div>
