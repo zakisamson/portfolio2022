@@ -7,10 +7,10 @@ type Props = Experiences
 
 function ExperienceCard({ jobTitle, companyName, techUsed, dateStarted, dateEnded, points }: Props) {
     return (
-        <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[400px] md:w-[600px] snap-center bg-[#292929] p-5 hover:opacity-100 opacity-40 transition-opacity duration-200'>
+        <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[300px] md:w-[600px] snap-center bg-[#292929] p-5 hover:opacity-100 md:opacity-40 transition-opacity duration-200'>
             <div className='px-0 md:px-10'>
-                <h4 className='text-4xl font-light'>{jobTitle}</h4>
-                <p className='font-bold text-2xl mt-1'>{companyName}</p>
+                <h4 className=' md:text-4xl font-light'>{jobTitle}</h4>
+                <p className='font-bold md:text-2xl mt-1'>{companyName}</p>
                 <div className='flex space-x-2 my-2'>
                     {techUsed && techUsed.map(({ id, url }) => {
                         return (
@@ -26,7 +26,7 @@ function ExperienceCard({ jobTitle, companyName, techUsed, dateStarted, dateEnde
                     })}
                 </div>
                 <p className='uppercase py-5 text-gray-300'>{dateStarted} - {dateEnded}</p>
-                <ul className='list-disc space-y-4 ml-5 text-lg'>
+                <ul className='list-disc space-y-4 ml-5 text-sm md:text-lg'>
                     {points && points.map(({ id, point }) => {
                         return (
                             <li key={id}>{point}</li>

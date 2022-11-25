@@ -20,8 +20,8 @@ function Contact({ }: Props) {
     return (
         <div className='h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'>
             <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl z-200'>Contact</h3>
-            <div className='flex flex-col space-y-10'>
-                <h4 className='text-4xl font-semibold text-center'>I got what you need. <span className='underline decoration-[#e28743]'>{`Let's`} talk</span></h4>
+            <div className='flex flex-col w-80 md:w-auto space-y-10 p-10'>
+                <h4 className='text-xl md:text-4xl font-semibold text-center'>I got what you need. <span className='underline decoration-[#e28743]'>{`Let's`} talk</span></h4>
                 <div className='space-y-10'>
                     <div className='flex items-center space-x-5'>
                         <PhoneIcon className="h-7 w-7 animate-pulse text-[#e28743]" />
@@ -36,8 +36,8 @@ function Contact({ }: Props) {
                         <p>zakisamson@gmail.com</p>
                     </div>
                 </div>
-                <form className='flex flex-col space-y-2 w-fit mx-auto' onSubmit={handleSubmit(onSubmit)}>
-                    <div className='flex space-x-2'>
+                <form className='flex flex-col w-64 md:w-auto space-y-2 w-fit mx-auto' onSubmit={handleSubmit(onSubmit)}>
+                    <div className='flex flex-col md:flex-row md:space-x-2 space-y-2 md:w-auto'>
                         <input {...register('name')} className='contactInput' type="text" placeholder="Name" />
                         <input {...register('email')} className='contactInput' type="email" placeholder="Email" />
                     </div>
