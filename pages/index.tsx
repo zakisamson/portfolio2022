@@ -12,7 +12,7 @@ export default function Home() {
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-x-hidden overflow-y-scroll z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#e28743]/80">
       <Head>
         <title>{`Zaki Samson's Portfolio`}</title>
-        <meta name="description" content="Made with love" />
+        <meta name="description" content="Yusuf Zaki Samson's portfolio website showcasing information about Zaki's career, skills, and projects. Made with love <3" />
       </Head>
 
       <Header />
